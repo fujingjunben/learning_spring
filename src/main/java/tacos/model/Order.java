@@ -1,6 +1,7 @@
 package tacos.model;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 @Data
 @Entity
 @Table(name = "Taco_Order")
@@ -55,6 +57,7 @@ public class Order implements Serializable {
     private List<Taco> tacos = new ArrayList<>();
 
     public void addDesign(Taco design) {
+        log.info("add desgin: " + design);
         this.tacos.add(design);
     }
 
