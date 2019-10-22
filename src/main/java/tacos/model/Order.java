@@ -52,6 +52,8 @@ public class Order implements Serializable {
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
 
+    @ManyToOne
+    private User user;
 
     @ManyToMany(targetEntity = Taco.class)
     private List<Taco> tacos = new ArrayList<>();
@@ -60,6 +62,7 @@ public class Order implements Serializable {
         log.info("add desgin: " + design);
         this.tacos.add(design);
     }
+
 
     @PrePersist
     void placedAt() {
