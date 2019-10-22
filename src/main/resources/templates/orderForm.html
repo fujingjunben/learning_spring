@@ -34,12 +34,22 @@ Please correct the problems below and resubmit.
     <h3>Here's how I'll pay...</h3>
     <label for="ccNumber">Credit Card #: </label>
     <input type="text" th:field="*{ccNumber}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('ccNumber')}"
+          th:errors="*{ccNumber}">CC Num Error</span>
     <br/>
     <label for="ccExpiration">Expiration: </label>
     <input type="text" th:field="*{ccExpiration}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('ccExpiration')}"
+          th:errors="*{ccExpiration}">CCExpiration Error</span>
     <br/>
     <label for="ccCVV">CVV: </label>
     <input type="text" th:field="*{ccCVV}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('ccCVV')}"
+          th:errors="*{ccCVV}">ccCVV Error</span>
+
     <br/>
     <input type="submit" value="Submit order"/>
 </form>
