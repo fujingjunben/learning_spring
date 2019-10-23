@@ -1,7 +1,7 @@
-<cloud-title>Design your taco masterpiece</cloud-title>
+<cloud-title>Design your tacos masterpiece</cloud-title>
 
 <p>We provide a palette of fresh ingredients...you provide the inspiration! Select the
-  components that will come together as your crowning achievement of taco workmanship.</p>
+  components that will come together as your crowning achievement of tacos workmanship.</p>
 
 <form (ngSubmit)="onSubmit()">
   <div class="ingredientsblock" style="text-align: center; width: 100%;">
@@ -30,13 +30,13 @@
         <input type="checkbox" (change)="updateIngredients(sauce, $event)" name="ingredients" value="{{sauce.id}}"/>{{sauce.name}}<br/>
       </span>
     </group-box>
-    <group-box title="Name your taco creation">
-      My taco magnum opus shall be called<br/>
+    <group-box title="Name your tacos creation">
+      My tacos magnum opus shall be called<br/>
       the "<input type="text" [(ngModel)]="model.name" name="name" class="nameField"/>"!
     </group-box>
   </div>
 
   <div style="text-align:center; width:100%;">
-    <big-button label="Construct this taco"></big-button>
+    <big-button label="Construct this tacos"></big-button>
   </div>
 </form>

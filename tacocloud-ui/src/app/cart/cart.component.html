@@ -1,14 +1,14 @@
-<cloud-title>Order your taco creations</cloud-title>
+<cloud-title>Order your tacos creations</cloud-title>
 
-<p>You've crafted your mouthwatering taco masterpieces. Now, just imagine those
+<p>You've crafted your mouthwatering tacos masterpieces. Now, just imagine those
   creations appearing before you at home...or work...or wherever you are!</p>
 
 <p *ngIf="(cartItems.length == 0)"><b>There are no tacos currently in your cart.
   <a [routerLink]="['../design']">Create one now</a> or choose a
-  <a [routerLink]="['../recents']">recently created taco</a>.</b></p>
+  <a [routerLink]="['../recents']">recently created tacos</a>.</b></p>
 
 <div *ngIf="(cartItems.length > 0)">
-<p>Here are your latest taco designs. Just say the
+<p>Here are your latest tacos designs. Just say the
     word and we'll set them on a cloud aloft to you!</p>
 
     <div class="groupBox groupBoxFull">
@@ -43,15 +43,15 @@
               <td>The "<span class="caps">{{item.taco.name}}</span>"</td>
               <td>
                 <ul class="commalist">
-                  <li *ngFor="let ingredient of item.taco.ingredients | nonwraps">{{ingredient.name}}</li>
+                  <li *ngFor="let ingredient of item.tacos.ingredients | nonwraps">{{ingredient.name}}</li>
                 </ul>
-                <span *ngIf="(item.taco.ingredients | wraps)?.length > 0">
+                <span *ngIf="(item.tacos.ingredients | wraps)?.length > 0">
                     <span>wrapped in</span>
                   <ul class="commalist">
-                      <li *ngFor="let ingredient of item.taco.ingredients | wraps">{{ingredient.name}}</li>
+                      <li *ngFor="let ingredient of item.tacos.ingredients | wraps">{{ingredient.name}}</li>
                   </ul>
                 </span>
-                <span *ngIf="(item.taco.ingredients | wraps)?.length == 0">in a bowl</span>
+                <span *ngIf="(item.tacos.ingredients | wraps)?.length == 0">in a bowl</span>
                 </td>
               <td align="right">{{4.99 * item.quantity | currency}}</td>
             </tr>
