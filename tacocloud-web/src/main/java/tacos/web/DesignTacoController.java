@@ -15,11 +15,11 @@ import java.util.stream.Collectors;
 import tacos.data.IngredientRepository;
 import tacos.data.TacoRepository;
 import tacos.data.UserRepository;
-import tacos.model.Order;
-import tacos.model.Taco;
-import tacos.model.Ingredient;
-import tacos.model.Ingredient.Type;
-import tacos.model.User;
+import tacos.Order;
+import tacos.Taco;
+import tacos.Ingredient;
+import tacos.Ingredient.Type;
+import tacos.User;
 
 import javax.validation.Valid;
 

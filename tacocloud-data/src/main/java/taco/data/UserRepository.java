@@ -1,7 +1,7 @@
 package tacos.data;
 
 import org.springframework.data.repository.CrudRepository;
-import tacos.model.User;
+import tacos.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 
