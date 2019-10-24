@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import tacos.Taco;
-import tacos.data.OrderRepository;
 import tacos.data.TacoRepository;
 
 import java.util.Optional;
@@ -29,8 +28,7 @@ public class DesignTacoController {
 
     @GetMapping
     public Iterable<Taco> recentTacos() {
-        PageRequest page = PageRequest.of(
-                0, 12, Sort.by("createdAt").descending());
+        PageRequest page = PageRequest.of(0, 12, Sort.by("createdAt").descending());
 
         return tacoRepo.findAll(page).getContent();
     }
@@ -50,26 +48,3 @@ public class DesignTacoController {
         return tacoRepo.save(taco);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
